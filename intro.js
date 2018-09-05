@@ -6,11 +6,18 @@ function h(type, props, ...children){
 
 
 //since Jsx is just a syntax suger
-//we need to implement a function to transfer virtual dom into Html_Dom
+//we need to implement a function to transfer virtual dom into realDom
 //with Pragma (@jsx h)  every jsx node will auto transformed into an object by function h
 
 
-//so all the list will be like in complier : list = h('list', {id:"list"}, .....);  
+/* so all the list will be like in complier : 
+    const a = (
+      h(‘ul’, { className: ‘list’ },
+        h(‘li’, {},  'apple'),
+        h(‘li’, {}, 'beer'),
+    );
+);*/
+
 const list={
 	<ul class="list">
 		<li>apple</li>
